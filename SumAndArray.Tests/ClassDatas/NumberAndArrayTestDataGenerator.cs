@@ -2,8 +2,17 @@
 
 namespace SumAndArray.Tests.ClassDatas
 {
+    /// <summary>
+    /// Генератор входных данных для тестов <see cref="AlgorithmTests"/>.
+    /// </summary>
     internal class NumberAndArrayTestDataGenerator : IEnumerable<object[]>
     {
+        /// <summary>
+        /// Входные данные для тестов.
+        /// Первый элемент кортежа - число n.
+        /// Второй элемент кортежа - массив, в котором ищут сумму, равную числу n.
+        /// Третий элемент кортежа - ожидаемый правильный ответ алгоритма.
+        /// </summary>
         private static readonly IEnumerable<(uint, uint[], bool)> _numberAndArrayAndExpected = new[]
         {
             (10u, new uint[] { 3, 1, 8, 5, 4 }, true),
